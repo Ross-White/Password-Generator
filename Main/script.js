@@ -41,15 +41,12 @@ function generatePassword() {
   if (getLowerCase) {
     characters += lowerCase
   }
-  
   if (getUpperCase) {
     characters += upperCase
   }
-
   if (getSpecial) {
     characters += special
   }
-
   if (getNumber) {
     characters += number
   }
