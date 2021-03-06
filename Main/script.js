@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var passwordText = document.querySelector("#password");
 
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -7,19 +8,18 @@ var special = "!£$%&*@?~{}()[]";
 var number = "0123456789";
 var characters = "";
 
+// Generate Password
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 
-// Add event listener to generate button
+// Run writePassword function when Generate button is pressed
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
-  var result = "";
-  // Define number of characters
+  // Choose number of characters
   var passwordLength = prompt("How many characters would you like? It must be between 8 and 128 characters.");
   // Validate number of characters
   if (passwordLength < 8 || passwordLength > 128) {
@@ -37,6 +37,33 @@ function generatePassword() {
     alert('You must select at least one character type.');
     return generatePassword()
   }
+  // Compile string of charaters, accoring to selected character types
+  if (getLowerCase) {
+    characters += lowerCase
+  }
+  
+  if (getUpperCase) {
+    characters += upperCase
+  }
 
+  if (getSpecial) {
+    characters += special
+  }
+
+  if (getNumber) {
+    characters += number
+  }
+
+  console.log(characters);
+  
+  result = "";
+  // Loop through character string selecting values at random until chosen password length is met
+  for (var i = 0; i < passwordLength; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+
+  console.log(result);
+  return result;
 }
+
 
