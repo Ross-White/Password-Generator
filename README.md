@@ -34,7 +34,7 @@ THEN the password is either displayed in an alert or written to the page
 
 ## Screenshot
 
-![Image of deployed application.](./main/assets/screenshot.jpg)
+![Image of deployed application.](./screenshot.jpg)
 
 ## Deployed Application
 
