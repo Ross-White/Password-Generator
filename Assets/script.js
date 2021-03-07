@@ -38,28 +38,30 @@ function generatePassword() {
     return generatePassword()
   }
   // Compile string of charaters, accoring to selected character types
+  var result = "";
   if (getLowerCase) {
-    characters += lowerCase
+    characters += lowerCase;
+    result += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
   }
   if (getUpperCase) {
-    characters += upperCase
+    characters += upperCase;
+    result += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
   }
   if (getSpecial) {
-    characters += special
+    characters += special;
+    result += special.charAt(Math.floor(Math.random() * special.length));
   }
   if (getNumber) {
-    characters += number
+    characters += number;
+    result += number.charAt(Math.floor(Math.random() * number.length));
   }
-
-  console.log(characters);
-  
-  result = "";
+ 
   // Loop through character string selecting values at random until chosen password length is met
-  for (var i = 0; i < passwordLength; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  for (var i = result.length; i < passwordLength; i++) {
+  result += characters.charAt(Math.floor(Math.random() * characters.length)); 
+    
   }
 
-  console.log(result);
   return result;
 }
 
