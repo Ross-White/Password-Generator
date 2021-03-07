@@ -34,7 +34,7 @@ THEN the password is either displayed in an alert or written to the page
 
 ## Screenshot
 
-![Image of deployed application.](![Screenshot](https://user-images.githubusercontent.com/76071027/110237834-0f80e880-7f36-11eb-9738-30147913c1e2.JPG))
+![Screenshot](https://user-images.githubusercontent.com/76071027/110237834-0f80e880-7f36-11eb-9738-30147913c1e2.JPG)
 
 ## Deployed Application
 
