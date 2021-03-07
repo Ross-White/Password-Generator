@@ -6,7 +6,6 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var special = "!£$%&*@?~{}()[]";
 var number = "0123456789";
-var characters = "";
 
 // Generate Password
 // Write password to the #password input
@@ -19,6 +18,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
+  var characters = "";
   // Choose number of characters
   var passwordLength = prompt("How many characters would you like? It must be between 8 and 128 characters.");
   // Validate number of characters
